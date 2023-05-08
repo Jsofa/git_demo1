@@ -18,14 +18,29 @@ public class ControllerSeed {
 //        return "hello world!";
 //        int [][] one = new int[2][3];
     }
-    @RequestMapping("/one")
+    @RequestMapping("/view")
     @ResponseBody
     public ModelAndView seed_two(){
+        ModelAndView mav =new ModelAndView();
+        mav.setViewName("view.html");
+        return mav;
+//        return "hello world!";
+//        int [][] one = new int[2][3];
+    }
+    @RequestMapping("/one")
+    @ResponseBody
+    public ModelAndView seed_three(){
         ModelAndView mav =new ModelAndView();
         mav.setViewName("one.html");
         return mav;
 //        return "hello world!";
 //        int [][] one = new int[2][3];
+    }
+    @ResponseBody
+    public void seed_four(HttpServletRequest request,HttpServletResponse response){
+        String username=request.getParameter("userName");
+        String age = request.getParameter("age");
+
     }
 
 }
